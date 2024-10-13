@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar Empleo - Global Code Corp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white; /* Fondo blanco */
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .job-list {
+            width: 80%;
+            max-width: 800px; /* Ancho máximo de la lista */
+            margin-bottom: 20px;
+        }
+
+        .job-item {
+            background-color: rgba(0, 0, 0, 0.6); /* Negro semitransparente */
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px; /* Espaciado entre los trabajos */
+        }
+
+        .job-item button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E90FF; /* Color del botón */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .job-item button:hover {
+            background-color: #1c7ed6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aplicar Empleo</h1>
+
+    <div class="job-list">
+        <div class="job-item">
+            <span>Desarrollador Frontend</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload1').click();">Cargar CV</button>
+                <input type="file" id="cvUpload1" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(1)">
+                <button onclick="sendCV(1)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Desarrollador Backend</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload2').click();">Cargar CV</button>
+                <input type="file" id="cvUpload2" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(2)">
+                <button onclick="sendCV(2)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Especialista en Seguridad Informática</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload3').click();">Cargar CV</button>
+                <input type="file" id="cvUpload3" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(3)">
+                <button onclick="sendCV(3)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Administrador de Base de Datos</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload4').click();">Cargar CV</button>
+                <input type="file" id="cvUpload4" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(4)">
+                <button onclick="sendCV(4)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Administrador de Redes</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload5').click();">Cargar CV</button>
+                <input type="file" id="cvUpload5" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(5)">
+                <button onclick="sendCV(5)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Recepción</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload6').click();">Cargar CV</button>
+                <input type="file" id="cvUpload6" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(6)">
+                <button onclick="sendCV(6)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Aseo y Limpieza</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload7').click();">Cargar CV</button>
+                <input type="file" id="cvUpload7" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(7)">
+                <button onclick="sendCV(7)">Enviar CV</button>
+            </div>
+        </div>
+        <div class="job-item">
+            <span>Cocina</span>
+            <div>
+                <button class="upload-button" onclick="document.getElementById('cvUpload8').click();">Cargar CV</button>
+                <input type="file" id="cvUpload8" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload(8)">
+                <button onclick="sendCV(8)">Enviar CV</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleFileUpload(jobId) {
+            const fileInput = document.getElementById(`cvUpload${jobId}`);
+            const cvFile = fileInput.files[0];
+
+            if (cvFile) {
+                alert(`Gracias por seleccionar tu CV para el trabajo. Puedes proceder a enviarlo.`);
+                // Aquí podrías implementar la lógica para enviar el CV al servidor
+            } else {
+                alert('Por favor, selecciona un archivo.');
+            }
+        }
+
+        function sendCV(jobId) {
+            alert(`Hemos recibido tu CV para el trabajo ${jobId}.`);
+        }
+    </script>
+</body>
+</html>

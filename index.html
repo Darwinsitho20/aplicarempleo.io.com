@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posiciones Remotas para Desarrolladores</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://static.vecteezy.com/system/resources/previews/009/392/527/non_2x/web-page-on-a-laptop-screen-a-mobile-phone-is-lying-a-cloud-a-cloud-service-or-an-application-modern-technological-background-isometry-conceptual-banner-of-web-technologies-vector.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero h1 span {
+            color: #f5ba42;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: black;
+            border-radius: 15px;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .card a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .apply-button {
+            background-color: #f5ba42;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .apply-button:hover {
+            background-color: #d9a131;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                font-size: 16px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            input[type="text"] {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#section1">Oportunidades</a>
+        <a href="#section2">Empresas destacadas</a>
+        <a href="#section3">Aplicación fácil</a>
+    </nav>
+
+    <!-- Sección principal -->
+    <header class="hero">
+        <div class="content">
+            <h1>Posiciones remotas para <span>Desarrolladores</span></h1>
+            <p>Ayudamos a colocar a los mejores talentos tecnológicos en las mejores empresas del mundo.</p>
+            <input type="text" id="jobSearch" placeholder="Buscar un trabajo" onkeypress="searchJob(event)">
+        </div>
+    </header>
+
+    <!-- Sección de Oportunidades Laborales -->
+    <section id="section1">
+        <h2>Oportunidades laborales</h2>
+        <div class="grid">
+            <div class="card">
+                <a href="DesarrolladorFrontend.html">
+                    <img src="https://blog.sinapsis.agency/wp-content/uploads/2021/04/DEFINICIONES-DESARROLLO-FRONT-END.jpg" alt="Frontend Developer">
+                    <h3>Desarrollador Frontend</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="DesarrolladorBackend.html">
+                    <img src="https://atlantictech.io/wp-content/uploads/2022/08/3fe03-backend-1300x731.png" alt="Backend Developer">
+                    <h3>Desarrollador Backend</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Ciberseguridad.html">
+                    <img src="https://blog.conzultek.com/hs-fs/hubfs/seguridad-informatica-4.png?width=1600&name=seguridad-informatica-4.png" alt="Seguridad Informática">
+                    <h3>Especialista en Seguridad Informática</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Basededatos.html">
+                    <img src="https://atlantictech.io/wp-content/uploads/2022/08/2c4ea-basededatos2-1300x731.png" alt="Administrador de Base de Datos">
+                    <h3>Administrador de Base de Datos</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Redes.html">
+                    <img src="https://www.e-dea.co/hubfs/E-dea---Comparativo-NPM-Portada-Blog-01.jpg" alt="Administrador de Redes">
+                    <h3>Administrador de Redes</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Recepción.html">
+                    <img src="https://www.miralay.es/wp-content/uploads/2020/02/recepcion-830x553-1.jpg" alt="Recepción">
+                    <h3>Recepción</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Aseoylimpieza.html">
+                    <img src="https://www.misionservir.com/wp-content/uploads/2023/11/servicios-de-aseo-y-limpieza-profesional-.jpg" alt="Recepción">
+                    <h3>Aseo y Limpieza</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Cocina.html">
+                    <img src="https://solucionesgastronomicas.com/distribuidores/wp-content/uploads/2020/11/Que-hace-tan-especial-una-cocina-industrial.jpg" alt="Recepción">
+                    <h3>Cocina</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Empresas Destacadas -->
+    <section id="section2">
+        <h2>Empresas destacadas</h2>
+        <div class="grid">
+            <div class="card">
+                <a href="IncCaptación.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs9oX0ihaVpFw721cfuVLXAO0uvFet8xEHEQ&s" alt="Empresa 1">
+                    <h3>Desarrolladores Inc</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="CaptaciónSofTech.html">
+                    <img src="https://www.softsol.co.in/wp-content/uploads/2020/11/sofstechsolutions-softsol.co_.in-central-indias-leading-data-proceesng-kpo-data-mining-service-provider.png" alt="Empresa 2">
+                    <h3>SoftTech Solutions</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="CaptaciónGlobal.html">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGrVExnoEM68Q/company-logo_200_200/company-logo_200_200/0/1663859167643/global_code_technology_logo?e=2147483647&v=beta&t=5kRS3f6_bAiIf7YPSbKCyLGtmwuH9a54VQeNAAa5jnw" alt="Empresa 3">
+                    <h3>Global Code Corp</h3>
+                </a>
+            </div>
+            <div class="card">
+                <a href="InnovaCaptación.html">
+                    <img src="https://innovadevelopers.com/wp-content/uploads/2023/06/Logo-Full-Color.png" alt="Empresa 4">
+                    <h3>Innova Developers</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Aplicación Fácil -->
+    <section id="section3">
+        <h2>Aplicación fácil</h2>
+        <p>Postúlate a múltiples ofertas de trabajo con solo un clic y empieza tu próximo desafío.</p>
+        <a class="apply-button" href="aplicarmepleo.html">Aplicar a empleo</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Posiciones Remotas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para buscar un trabajo por nombre y desplazar a la sección correspondiente
+        function searchJob(event) {
+            if (event.key === "Enter") {
+                var query = document.getElementById('jobSearch').value.toLowerCase();
+                if (query.includes('frontend')) {
+                    document.getElementById('frontend').scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('backend')) {
+                    document.getElementById('backend').scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('seguridad') || query.includes('security')) {
+                    document.getElementById('security').scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('base de datos') || query.includes('database')) {
+                    document.getElementById('database').scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('redes') || query.includes('network')) {
+                    document.getElementById('network').scrollIntoView({ behavior: 'smooth' });
+                } else if (query.includes('recepcion')) {
+                    document.getElementById('reception').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

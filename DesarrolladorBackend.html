@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladores Backend</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Fondo blanco */
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            color: black;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .icon-card {
+            background-color: #f0f0f0; /* Fondo de las tarjetas */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .icon-card img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .icon-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .icon-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección de cabecera -->
+    <header>
+        <h1>Desarrolladores Backend</h1>
+        <p>Conoce las tecnologías que utilizamos en nuestra empresa.</p>
+    </header>
+
+    <!-- Sección de lenguajes de programación -->
+    <section id="lenguajes">
+        <h2>Lenguajes y Tecnologías</h2>
+        <div class="icon-grid">
+            <div class="icon-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYrNVwxlBhUzwBd6H4YqdJckckasr4N6PjQw&s" alt="Node.js">
+                <h3>Node.js</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://i.blogs.es/e7b69c/java_logo/650_1200.webp" alt="Java">
+                <h3>Java</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
+                <h3>Python</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/800px-PHP-logo.svg.png" alt="PHP">
+                <h3>PHP</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://desarrolloweb.com/storage/tag_images/actual/BzOL16MEqsKOe0VThjF6FXPBi0uyK16lkTety9Wz.png" alt="C#">
+                <h3>C#</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png" alt="Go">
+                <h3>Go</h3>
+            </div>
+            <div class="icon-card">
+                <img src="https://habrastorage.org/webt/xc/y-/bu/xcy-buybcop-lnllkaliablk5zm.png" alt="SQL">
+                <h3>SQL</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Posiciones Remotas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
