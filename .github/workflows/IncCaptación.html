@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladores Inc.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify; /* Justificado */
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 1.1em;
+            max-width: 800px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .semi-rounded {
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .semi-rounded img {
+            width: 100%; /* Ancho máximo de la imagen */
+            height: auto;
+            max-width: 150px; /* Limitar el tamaño máximo de la imagen */
+            margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+            border-radius: 10px;
+        }
+
+        .form-section {
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        .form-section h2 {
+            text-align: center; /* Centrar el título de Contacto */
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .upload-section {
+            margin: 20px 0;
+            text-align: right;
+        }
+
+        .upload-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .upload-button:hover {
+            background-color: #45a049;
+        }
+
+        .upload-button input {
+            display: none;
+        }
+
+        .upload-button label {
+            color: white;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #4CAF50;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Desarrolladores Inc.</h1>
+    <p>
+        En Desarrolladores Inc., nos dedicamos a ofrecer soluciones tecnológicas innovadoras 
+        que impulsan el crecimiento y la eficiencia de nuestros clientes.
+    </p>
+
+    <div class="container">
+        <!-- Sección de Servicios con imagen -->
+        <div class="semi-rounded">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfetN7eCliw5cJmnVGJ7KHbu-_H0QxcAA4iQ&s" alt="Servicios">
+            <h2>Servicios</h2>
+            <p>Desarrollo de software a medida, aplicaciones web y móviles, y consultoría tecnológica.</p>
+        </div>
+
+        <!-- Sección de Sobre Nosotros con imagen -->
+        <div class="semi-rounded">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-OVN49IId48V3EYL7-QWdaYxuresQ7lDsw&s" alt="Sobre Nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Un equipo de expertos apasionados por la tecnología, listos para ayudarte a alcanzar tus objetivos.</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Contacto</h2>
+        <p>Nombre de Empresa: Desarrolladores Inc.</p>
+        <p>NIT: 123456789</p>
+        <p>Administrador: Juan Pérez</p>
+        <p>Ingeniero en Cargo: María López</p>
+        <p>Email: contacto@desarrolladoresinc.com</p>
+        <p>Número de Teléfono: +57 123 456 7890</p>
+
+        <input type="text" id="email" placeholder="Escribe tu correo" required>
+        <textarea id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+        <button id="sendMessage">Enviar Mensaje</button>
+
+        <div class="upload-section">
+            <label class="upload-button" for="cvUpload">Cargar CV
+                <input type="file" id="cvUpload" accept=".pdf, .doc, .docx, .xls, .xlsx">
+            </label>
+            <button id="uploadCV">Enviar CV</button>
+        </div>
+
+        <div class="message" id="responseMessage"></div>
+    </div>
+
+    <script>
+        // Enviar mensaje
+        document.getElementById('sendMessage').addEventListener('click', function () {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (email && message) {
+                document.getElementById('responseMessage').innerText = 'Pronto nos pondremos en contacto con usted.';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+
+        // Cargar CV
+        document.getElementById('uploadCV').addEventListener('click', function () {
+            const cvUpload = document.getElementById('cvUpload').files[0];
+            if (cvUpload) {
+                document.getElementById('responseMessage').innerText = 'Tan pronto la recepción se pondrá en contacto con usted.';
+                document.getElementById('cvUpload').value = '';
+            } else {
+                alert('Por favor, selecciona un archivo.');
+            }
+        });
+    </script>
+</body>
+</html>

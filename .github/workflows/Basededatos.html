@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Base de Datos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #1f4037, #99f2c8); /* Degradado verde */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+            text-align: justify; /* Aplica Ctrl + J (Justificar) */
+        }
+
+        .text-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .button-section {
+            margin-top: 20px;
+        }
+
+        .button-section a {
+            padding: 12px 25px;
+            background-color: #ffffff;
+            color: #1f4037;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-section a:hover {
+            background-color: #99f2c8;
+            color: white;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de texto a la izquierda -->
+        <div class="text-section">
+            <h1>Administrador de Base de Datos</h1>
+            <p>
+                Como administrador de base de datos, serás responsable de gestionar, 
+                mantener y asegurar bases de datos robustas. Garantizarás la integridad 
+                y seguridad de los datos, optimizando su acceso para las necesidades 
+                del negocio.
+            </p>
+            <div class="button-section">
+                <a href="index.html">Volver</a>
+            </div>
+        </div>
+
+        <!-- Sección de imagen a la derecha -->
+        <div class="image-section">
+            <img src="https://lluviadigital.com/wp-content/uploads/2023/12/marketing-de-base-de-datos-1024x682.png" alt="Base de Datos">
+        </div>
+    </div>
+</body>
+</html>

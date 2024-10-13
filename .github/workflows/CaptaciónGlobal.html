@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Code Corp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #013220; /* Verde marino oscuro */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            text-align: center; /* Centrado del contenido del encabezado */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: center; /* Centrado del texto */
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .services, .about {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .services img, .about img {
+            width: 150px; /* Tamaño de las imágenes */
+            height: 150px; /* Tamaño de las imágenes */
+            margin-bottom: 20px;
+            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+            transition: transform 0.3s; /* Transición para el efecto de aumento */
+        }
+
+        .services img:hover, .about img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+        }
+
+        .services h2, .about h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .services p, .about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .contact-section {
+            width: 80%;
+            max-width: 600px; /* Reducción del ancho del cuadro de contacto */
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-section input, .contact-section textarea {
+            width: calc(100% - 20px); /* Ajusta el ancho para el padding */
+            padding: 10px;
+            margin: 5px 0; /* Espaciado reducido */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-section button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E90FF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px; /* Espaciado entre botones */
+        }
+
+        .contact-section button:hover {
+            background-color: #1c7ed6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .btn-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-container label {
+            margin-right: 10px; /* Espaciado entre botones */
+        }
+
+        /* Estilo para la imagen ampliada */
+        .overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            text-align: center; /* Centramos el texto */
+        }
+
+        .overlay img {
+            max-width: 90%; /* Max width para la imagen ampliada */
+            max-height: 90%; /* Max height para la imagen ampliada */
+        }
+
+        .overlay h2 {
+            color: white; /* Color del texto en el overlay */
+            margin-top: 20px; /* Espacio entre imagen y texto */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Global Code Corp</h1>
+        <p>Soluciones tecnológicas para tu empresa.</p> <!-- Texto más corto -->
+    </header>
+
+    <!-- Servicios -->
+    <section class="services">
+        <img src="https://internetdelascosas.xyz/img/pr-cloudlyte-2024-lp-banner.jpg" alt="Icono Servicios" onclick="openImage(this)">
+        <h2>Servicios</h2>
+        <p>Desarrollo de software, integración de sistemas y consultoría tecnológica.</p> <!-- Texto más corto -->
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="about">
+        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGrVExnoEM68Q/company-logo_200_200/company-logo_200_200/0/1663859167643/global_code_technology_logo?e=2147483647&v=beta&t=5kRS3f6_bAiIf7YPSbKCyLGtmwuH9a54VQeNAAa5jnw" alt="Icono Sobre Nosotros" onclick="openImage(this)">
+        <h2>Sobre Nosotros</h2>
+        <p>Un equipo de profesionales con más de 10 años de experiencia.</p> <!-- Texto más corto -->
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+        <h2>Contacto</h2>
+        <p>Nombre de Empresa: Global Code Corp</p>
+        <p>NIT: 123456789</p>
+        <p>Administrador: Laura Pérez</p>
+        <p>Ingeniero en Cargo: Juan Rodríguez</p>
+        <p>Email: contacto@globalcodecorp.com</p>
+        <p>Número de Teléfono: +57 321 123 4567</p>
+
+        <!-- Campo de email -->
+        <input type="text" id="email" placeholder="Escribe tu correo" required>
+
+        <!-- Campo de mensaje -->
+        <textarea id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+
+        <!-- Botón de enviar mensaje -->
+        <button id="sendMessage">Enviar Mensaje</button>
+
+        <!-- Botones para Cargar y Enviar CV -->
+        <div class="btn-container">
+            <label class="upload-button">
+                <input type="file" id="cvUpload" accept=".pdf, .doc, .docx, .xls, .xlsx" style="display:none;" onchange="handleFileUpload()">
+                <button type="button" id="loadCVButton">Cargar CV</button>
+            </label>
+            <button id="uploadCV">Enviar CV</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Global Code Corp. Todos los derechos reservados.
+    </footer>
+
+    <!-- Overlay para imagen ampliada -->
+    <div class="overlay" id="overlay" onclick="closeOverlay()">
+        <img id="overlayImg" src="" alt="Imagen ampliada">
+        <h2 id="overlayText"></h2> <!-- Texto para la imagen ampliada -->
+    </div>
+
+    <script>
+        // Enviar mensaje
+        document.getElementById('sendMessage').addEventListener('click', function () {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (email && message) {
+                alert('Gracias por tu mensaje. Pronto nos pondremos en contacto contigo.');
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+
+        // Cargar CV (simular clic en input de archivo)
+        document.getElementById('loadCVButton').addEventListener('click', function () {
+            document.getElementById('cvUpload').click();
+        });
+
+        // Manejar la carga de archivo
+        function handleFileUpload() {
+            const cvUpload = document.getElementById('cvUpload').files[0];
+            if (cvUpload) {
+                alert('Gracias por seleccionar tu CV. Puedes proceder a enviarlo.');
+                // Aquí podrías implementar la lógica para enviar el CV al servidor
+            } else {
+                alert('Por favor, selecciona un archivo.');
+            }
+        }
+
+        // Función para abrir imagen ampliada
+        function openImage(img) {
+            const overlay = document.getElementById('overlay');
+            const overlayImg = document.getElementById('overlayImg');
+            const overlayText = document.getElementById('overlayText');
+
+            overlayImg.src = img.src; // Establece la imagen del overlay
+            overlayText.innerText = img.alt; // Establece el texto del overlay
+            overlay.style.display = 'flex'; // Muestra el overlay
+        }
+
+        // Función para cerrar el overlay
+        function closeOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none'; // Oculta el overlay
+        }
+    </script>
+</body>
+</html>

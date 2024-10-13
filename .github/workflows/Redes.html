@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Redes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #ffeb3b, #ffc107); /* Degradado amarillo */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1f4037; /* Color del texto en un tono oscuro para contraste */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+            text-align: justify; /* Aplica Ctrl + J (Justificar) */
+        }
+
+        .text-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .button-section {
+            margin-top: 20px;
+        }
+
+        .button-section a {
+            padding: 12px 25px;
+            background-color: #1f4037; /* Color de fondo del botón */
+            color: #ffffff; /* Color del texto del botón */
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-section a:hover {
+            background-color: #99f2c8; /* Color de fondo al pasar el mouse */
+            color: white;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de texto a la izquierda -->
+        <div class="text-section">
+            <h1>Administrador de Redes</h1>
+            <p>
+                Como administrador de redes, serás responsable de gestionar y mantener 
+                la infraestructura de red de una organización. Esto incluye la configuración, 
+                monitoreo y seguridad de redes, así como la solución de problemas 
+                relacionados con la conectividad y el rendimiento.
+            </p>
+            <div class="button-section">
+                <a href="index.html">Volver</a>
+            </div>
+        </div>
+
+        <!-- Sección de imagen a la derecha -->
+        <div class="image-section">
+            <img src="https://static.vecteezy.com/system/resources/previews/014/362/759/non_2x/system-administrator-icon-cartoon-computer-server-vector.jpg" alt="Redes">
+        </div>
+    </div>
+</body>
+</html>

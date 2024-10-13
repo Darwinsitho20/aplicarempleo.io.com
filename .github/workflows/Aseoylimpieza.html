@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aseo y Limpieza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #003366, #006699); /* Degradado azul marino */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+            text-align: justify; /* Aplica Ctrl + J (Justificar) */
+        }
+
+        .text-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .button-section {
+            margin-top: 20px;
+        }
+
+        .button-section a {
+            padding: 12px 25px;
+            background-color: #ffffff; /* Color de fondo del botón */
+            color: #003366; /* Color del texto del botón */
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-section a:hover {
+            background-color: #006699; /* Color de fondo al pasar el mouse */
+            color: white;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de texto a la izquierda -->
+        <div class="text-section">
+            <h1>Aseo y Limpieza</h1>
+            <p>
+                En el área de aseo y limpieza, tu papel será fundamental para mantener 
+                un entorno saludable y agradable. Serás responsable de la limpieza, 
+                desinfección y organización de los espacios, asegurando que todos 
+                los estándares de higiene se cumplan.
+            </p>
+            <div class="button-section">
+                <a href="index.html">Volver</a>
+            </div>
+        </div>
+
+        <!-- Sección de imagen a la derecha -->
+        <div class="image-section">
+            <img src="https://comfenalcoquindio.com/wp-content/uploads/2022/04/aseo-limpieza-y-control-de-plagas.webp" alt="Aseo y Limpieza">
+        </div>
+    </div>
+</body>
+</html>
